@@ -14,11 +14,13 @@
       src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.3/dist/cdn.min.js"
     ></script>
   </head>
-  <body class="bg-gradient-to-b from-slate-900 to-blue-950">
+  <body
+    x-data="{open: false}"
+    class="bg-gradient-to-b from-slate-900 to-blue-950"
+  >
     <header
-      x-data="{open: false}"
-      x-bind:class="{ 'h-screen':open,'flex-row':!open, 'flex-col':open, 'justify-between':!open, 'items-end':open}"
-      class="flex w-screen lg:w-full"
+      x-bind:class="{ 'h-screen':open,'flex-row':!open, 'flex-col':open, 'items-end':open}"
+      class="flex justify-between w-screen lg:w-full"
     >
       <div
         x-bind:class="{'hidden':open}"
@@ -40,7 +42,7 @@
         x-on:click="open= ! open"
         class="flex flex-col justify-start my-1 mx-1 relative lg:hidden"
       >
-        <div :class="open?'':'space-y-2.5'" class="h-9 w-9">
+        <div :class="open?'':'space-y-3'" class="h-9 w-9">
           <span
             x-bind:class="{'rotate-45':open, 'absolute':open,'top-2.5':open}"
             class="block w-8 h-0.5 bg-white"
@@ -57,9 +59,10 @@
       </button>
       <div
         x-bind:class="{'hidden':!open}"
-        class="w-full text-center text-2xl text-white from-slate-900 to-blue-950"
+        class="h-5/6 w-3/4 bg-no-repeat text-center text-2xl pt-20 rounded-xl text-white self-center"
+        style="background-image: url(skynight.png)"
       >
-        <ul class="space-y-3">
+        <ul class="flex flex-col h-full space-y-14">
           <li><a href="">Обо мне</a></li>
           <li><a href="">Предсказания</a></li>
           <li><a href="">Консультации</a></li>
@@ -67,9 +70,10 @@
           <li><a href="">Помощь на каждый день</a></li>
         </ul>
       </div>
+      <div class="h-9" x-bind:class="{'hidden':!open}"></div>
     </header>
     <nav
-      class="hidden w-full lg:flex lg:flex-row lg:justify-around text-lg text-white"
+      class="hidden w-full lg:flex lg:fixed lg:flex-row lg:justify-around text-lg text-white"
     >
       <a href="">Обо мне</a>
       <a href="">Предсказания</a>
@@ -78,6 +82,7 @@
       <a href="">Помощь на каждый день</a>
     </nav>
     <div
+      x-bind:class="{'hidden':open}"
       class="w-full lg:w-4/5 mt-12 bg-gradient-to-b from-slate-900 to-blue-950 lg:bg-amber-50 flex flex-row flex-wrap justify-center mx-auto"
     >
       <div

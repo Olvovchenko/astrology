@@ -16,7 +16,8 @@
   </head>
   <body
     x-data="{open: false}"
-    class="bg-gradient-to-b from-slate-900 to-blue-950"
+    class="bg-cover w-full h-full"
+    x-bind:class="{'bg-gradient-to-b from-slate-900 to-blue-950' :!open, 'bg-sky-one': open}"
   >
     <header
       x-bind:class="{ 'h-screen':open,'flex-row':!open, 'flex-col':open, 'items-end':open}"
@@ -59,8 +60,7 @@
       </button>
       <div
         x-bind:class="{'hidden':!open}"
-        class="h-5/6 w-3/4 bg-no-repeat text-center text-2xl pt-20 rounded-xl text-white self-center"
-        style="background-image: url(skynight.png)"
+        class="h-5/6 w-3/4 text-center text-2xl pt-20 rounded-xl text-white self-center"
       >
         <ul class="flex flex-col h-full space-y-14">
           <li><a href="">Обо мне</a></li>

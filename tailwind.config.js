@@ -7,6 +7,9 @@ module.exports = {
       spacing: {
         "24/50": "48.8%",
       },
+      backgroundImage: {
+        "sky-one": "url('../skynight.png')",
+      },
     },
   },
 

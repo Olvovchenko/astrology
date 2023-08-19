@@ -747,6 +747,10 @@ video {
   background-image: url('../skynight.png');
 }
 
+.bg-blue-tree {
+  background-image: url('../bluetree.png');
+}
+
 .from-slate-900 {
   --tw-gradient-from: #0f172a var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(15 23 42 / 0) var(--tw-gradient-to-position);
@@ -810,9 +814,20 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+@media (min-width: 768px) {
+  .md\:bg-blue-tree {
+    background-image: url('../bluetree.png');
+  }
+
+  .md\:px-3 {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+}
+
 @media (min-width: 1024px) {
-  .lg\:fixed {
-    position: fixed;
+  .lg\:z-10 {
+    z-index: 10;
   }
 
   .lg\:m-1 {

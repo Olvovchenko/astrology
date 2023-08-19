@@ -17,11 +17,11 @@
   <body
     x-data="{open: false}"
     class="bg-cover w-full h-full"
-    x-bind:class="{'bg-gradient-to-b from-slate-900 to-blue-950' :!open, 'bg-sky-one': open}"
+    x-bind:class="{'bg-gradient-to-b from-slate-900 to-blue-950' :!open, 'md:bg-blue-tree':open,'bg-sky-one': open}"
   >
     <header
       x-bind:class="{ 'h-screen':open,'flex-row':!open, 'flex-col':open, 'items-end':open}"
-      class="flex justify-between w-screen lg:w-full"
+      class="flex justify-between w-screen md:px-3 lg:w-full"
     >
       <div
         x-bind:class="{'hidden':open}"
@@ -73,7 +73,7 @@
       <div class="h-9" x-bind:class="{'hidden':!open}"></div>
     </header>
     <nav
-      class="hidden w-full lg:flex lg:fixed lg:flex-row lg:justify-around text-lg text-white"
+      class="hidden w-full lg:flex lg:z-10 lg:flex-row lg:justify-around text-lg text-white"
     >
       <a href="">Обо мне</a>
       <a href="">Предсказания</a>
@@ -88,7 +88,7 @@
       <div
         class="w-full lg:w-24/50 relative lg:m-1 mt-1 mb-0.5 mx-1 border-2 border-fuchsia-700"
       >
-        <img src="vozrastbr.png" class="z-0" />
+        <img src="vozrastbr.png" class="z-0 w-full" />
         <div
           class="flex flex-col justify-center absolute top-0 left-0 h-full z-10"
         >
@@ -107,7 +107,7 @@
       <div
         class="w-full lg:w-24/50 relative lg:m-1 mt-0.5 mb-0.5 mx-1 border-2 border-fuchsia-700"
       >
-        <img src="planety.png" class="z-0" />
+        <img src="planety.png" class="z-0 w-full" />
         <div
           class="flex flex-col justify-center absolute top-0 left-0 h-full z-10"
         >
@@ -127,7 +127,7 @@
       <div
         class="w-full lg:w-24/50 relative lg:m-1 mt-0.5 mb-0.5 mx-1 border-2 border-fuchsia-700"
       >
-        <img src="lunasan.png" class="z-0" />
+        <img src="lunasan.png" class="z-0 w-full" />
         <div
           class="flex flex-col justify-center absolute top-0 left-0 h-full z-10"
         >
@@ -147,7 +147,7 @@
       <div
         class="w-full lg:w-24/50 relative lg:m-1 mt-0.5 mb-0.5 mx-1 border-2 border-fuchsia-700"
       >
-        <img src="kameshki.png" class="z-0" />
+        <img src="kameshki.png" class="z-0 w-full" />
         <div
           class="flex flex-col justify-center absolute top-0 left-0 h-full z-10"
         >
@@ -167,7 +167,7 @@
       <div
         class="w-full lg:w-24/50 relative lg:m-1 mt-0.5 mb-0.5 mx-1 border-2 border-fuchsia-700"
       >
-        <img src="nat.jpg" class="z-0" />
+        <img src="nat.jpg" class="z-0 w-full" />
         <div
           class="flex flex-col justify-center absolute top-0 left-0 h-full z-10"
         >
@@ -185,7 +185,7 @@
       <div
         class="w-full lg:w-24/50 relative lg:m-1 mt-0.5 mb-0.5 mx-1 border-2 border-fuchsia-700"
       >
-        <img src="znaki.png" class="z-0" />
+        <img src="znaki.png" class="z-0 w-full" />
         <div
           class="flex flex-col justify-center absolute top-0 left-0 h-full z-10"
         >

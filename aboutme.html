@@ -91,12 +91,14 @@
     </nav>
     <div
       x-bind:class="{'hidden':open}"
-      class="lg:mt-10 lg:justify-center lg:mx-auto lg:w-10/12 md:w-full sm:w-full flex sm:flex-col md:flex-row lg:flex-row md:justify-around md:items-start max-w-screen-xl"
+      class="lg:mt-10 lg:justify-center lg:mx-auto lg:w-10/12 md:w-full sm:w-full flex flex-col md:flex-row lg:flex-row xl:flex-row 2xl:flex-row md:justify-around md:items-start max-w-screen-xl"
     >
-      <div class="lg:basis-1/2 md:basis-5/12 md:flex lg:flex sm:hidden">
+      <div
+        class="lg:basis-1/2 md:basis-5/12 md:flex lg:flex xl:flex 2xl:flex hidden"
+      >
         <img src="148.jpg" />
       </div>
-      <div class="w-full sm:flex lg:hidden md:hidden">
+      <div class="w-full flex lg:hidden md:hidden xl:hidden 2xl:hidden">
         <img src="mymobileph.JPG" />
       </div>
 

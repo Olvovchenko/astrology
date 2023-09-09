@@ -1017,8 +1017,20 @@ video {
     margin-right: auto;
   }
 
+  .xl\:flex {
+    display: flex;
+  }
+
+  .xl\:hidden {
+    display: none;
+  }
+
   .xl\:max-w-screen-xl {
     max-width: 1280px;
+  }
+
+  .xl\:flex-row {
+    flex-direction: row;
   }
 }
 
@@ -1028,7 +1040,19 @@ video {
     margin-right: auto;
   }
 
+  .\32xl\:flex {
+    display: flex;
+  }
+
+  .\32xl\:hidden {
+    display: none;
+  }
+
   .\32xl\:max-w-screen-xl {
     max-width: 1280px;
+  }
+
+  .\32xl\:flex-row {
+    flex-direction: row;
   }
 }

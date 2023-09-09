@@ -566,6 +566,10 @@ video {
   z-index: 10;
 }
 
+.m-2 {
+  margin: 0.5rem;
+}
+
 .mx-1 {
   margin-left: 0.25rem;
   margin-right: 0.25rem;
@@ -579,6 +583,16 @@ video {
 .my-1 {
   margin-top: 0.25rem;
   margin-bottom: 0.25rem;
+}
+
+.my-5 {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.my-7 {
+  margin-top: 1.75rem;
+  margin-bottom: 1.75rem;
 }
 
 .mb-0 {
@@ -629,6 +643,10 @@ video {
   height: 83.333333%;
 }
 
+.h-7 {
+  height: 1.75rem;
+}
+
 .h-9 {
   height: 2.25rem;
 }
@@ -643,6 +661,10 @@ video {
 
 .w-3\/4 {
   width: 75%;
+}
+
+.w-7 {
+  width: 1.75rem;
 }
 
 .w-8 {
@@ -661,6 +683,14 @@ video {
   width: 100vw;
 }
 
+.max-w-screen-xl {
+  max-width: 1280px;
+}
+
+.basis-1\/2 {
+  flex-basis: 50%;
+}
+
 .-rotate-45 {
   --tw-rotate: -45deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -669,6 +699,10 @@ video {
 .rotate-45 {
   --tw-rotate: 45deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.list-disc {
+  list-style-type: disc;
 }
 
 .flex-row {
@@ -729,14 +763,13 @@ video {
   border-width: 2px;
 }
 
-.border-fuchsia-700 {
-  --tw-border-opacity: 1;
-  border-color: rgb(162 28 175 / var(--tw-border-opacity));
-}
-
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-blue-tree {
+  background-image: url('../bluetree.png');
 }
 
 .bg-gradient-to-b {
@@ -745,10 +778,6 @@ video {
 
 .bg-sky-one {
   background-image: url('../skynight.png');
-}
-
-.bg-blue-tree {
-  background-image: url('../bluetree.png');
 }
 
 .from-slate-900 {
@@ -814,7 +843,53 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+@media (min-width: 640px) {
+  .sm\:flex {
+    display: flex;
+  }
+
+  .sm\:hidden {
+    display: none;
+  }
+
+  .sm\:w-full {
+    width: 100%;
+  }
+
+  .sm\:flex-col {
+    flex-direction: column;
+  }
+}
+
 @media (min-width: 768px) {
+  .md\:flex {
+    display: flex;
+  }
+
+  .md\:hidden {
+    display: none;
+  }
+
+  .md\:w-full {
+    width: 100%;
+  }
+
+  .md\:basis-5\/12 {
+    flex-basis: 41.666667%;
+  }
+
+  .md\:flex-row {
+    flex-direction: row;
+  }
+
+  .md\:items-start {
+    align-items: flex-start;
+  }
+
+  .md\:justify-around {
+    justify-content: space-around;
+  }
+
   .md\:bg-blue-tree {
     background-image: url('../bluetree.png');
   }
@@ -822,6 +897,11 @@ video {
   .md\:px-3 {
     padding-left: 0.75rem;
     padding-right: 0.75rem;
+  }
+
+  .md\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
   }
 }
 
@@ -834,6 +914,11 @@ video {
     margin: 0.25rem;
   }
 
+  .lg\:mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .lg\:my-12 {
     margin-top: 3rem;
     margin-bottom: 3rem;
@@ -844,12 +929,28 @@ video {
     margin-bottom: 0.75rem;
   }
 
+  .lg\:ml-20 {
+    margin-left: 5rem;
+  }
+
+  .lg\:ml-24 {
+    margin-left: 6rem;
+  }
+
+  .lg\:mt-10 {
+    margin-top: 2.5rem;
+  }
+
   .lg\:flex {
     display: flex;
   }
 
   .lg\:hidden {
     display: none;
+  }
+
+  .lg\:w-10\/12 {
+    width: 83.333333%;
   }
 
   .lg\:w-24\/50 {
@@ -864,12 +965,24 @@ video {
     width: 100%;
   }
 
+  .lg\:grow {
+    flex-grow: 1;
+  }
+
+  .lg\:basis-1\/2 {
+    flex-basis: 50%;
+  }
+
   .lg\:flex-row {
     flex-direction: row;
   }
 
   .lg\:items-center {
     align-items: center;
+  }
+
+  .lg\:justify-center {
+    justify-content: center;
   }
 
   .lg\:justify-around {
@@ -887,11 +1000,6 @@ video {
     background-color: rgb(255 251 235 / var(--tw-bg-opacity));
   }
 
-  .lg\:text-3xl {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
-  }
-
   .lg\:text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
@@ -900,5 +1008,27 @@ video {
   .lg\:text-lg {
     font-size: 1.125rem;
     line-height: 1.75rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .xl\:mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .xl\:max-w-screen-xl {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .\32xl\:mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .\32xl\:max-w-screen-xl {
+    max-width: 1280px;
   }
 }

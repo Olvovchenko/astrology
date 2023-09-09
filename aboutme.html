@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Milena Astrology</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.3/dist/cdn.min.js"
+    ></script>
+  </head>
+  <body
+    x-data="{open: false}"
+    class="bg-cover w-full h-full"
+    x-bind:class="{'bg-gradient-to-b from-slate-900 to-blue-950' :!open, 'md:bg-blue-tree':open,'bg-sky-one': open}"
+  >
+    <header
+      x-bind:class="{ 'h-screen':open,'flex-row':!open, 'flex-col':open, 'items-end':open}"
+      class="flex justify-between w-screen md:px-3 lg:w-full"
+    >
+      <div
+        x-bind:class="{'hidden':open}"
+        class="lg:my-12 lg:w-full flex flex-col lg:items-center space-y-2 lg:space-y-4"
+      >
+        <h1
+          class="font-serif text-2xl my-1 lg:my-3 lg:text-4xl tracking-wide text-white"
+          style="
+            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+              1px 1px 0 #000;
+          "
+        >
+          MILENA KOVALSKA
+        </h1>
+        <p
+          class="font-serif text-xs leading-3 my-1 md:text-lg lg:text-lg tracking-wide text-white"
+          style="
+            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+              1px 1px 0 #000;
+          "
+        >
+          МАСТЕР ХОРАРНОЙ АСТРОЛОГИИ
+        </p>
+      </div>
+
+      <button
+        x-on:click="open= ! open"
+        class="flex flex-col justify-start my-1 mx-1 relative lg:hidden"
+      >
+        <div :class="open?'':'space-y-3'" class="h-9 w-9">
+          <span
+            x-bind:class="{'rotate-45':open, 'absolute':open,'top-2.5':open}"
+            class="block w-8 h-0.5 bg-white"
+          ></span>
+          <span
+            x-bind:class="{'hidden':open}"
+            class="block w-8 h-0.5 bg-white"
+          ></span>
+          <span
+            x-bind:class="{'-rotate-45':open,'absolute':open, 'top-2.5':open}"
+            class="block w-8 h-0.5 bg-white absolute"
+          ></span>
+        </div>
+      </button>
+      <div
+        x-bind:class="{'hidden':!open}"
+        class="h-5/6 w-3/4 text-center text-2xl pt-20 rounded-xl text-white self-center"
+      >
+        <ul class="flex flex-col h-full space-y-14">
+          <li><a href="">Обо мне</a></li>
+          <li><a href="">Предсказания</a></li>
+          <li><a href="">Консультации</a></li>
+          <li><a href="">Обучение</a></li>
+          <li><a href="">Помощь на каждый день</a></li>
+        </ul>
+      </div>
+      <div class="h-9" x-bind:class="{'hidden':!open}"></div>
+    </header>
+    <nav
+      class="hidden lg:w-full xl:max-w-screen-xl xl:mx-auto 2xl:mx-auto 2xl:max-w-screen-xl lg:flex lg:z-10 lg:flex-row lg:justify-around text-lg text-white"
+    >
+      <a href="">Обо мне</a>
+      <a href="">Предсказания</a>
+      <a href="">Консультации</a>
+      <a href="">Обучение</a>
+      <a href="">Помощь на каждый день</a>
+    </nav>
+    <div
+      x-bind:class="{'hidden':open}"
+      class="lg:mt-10 lg:justify-center lg:mx-auto lg:w-10/12 md:w-full sm:w-full flex sm:flex-col md:flex-row lg:flex-row md:justify-around md:items-start max-w-screen-xl"
+    >
+      <div class="lg:basis-1/2 md:basis-5/12 md:flex lg:flex sm:hidden">
+        <img src="148.jpg" />
+      </div>
+      <div class="w-full sm:flex lg:hidden md:hidden">
+        <img src="mymobileph.JPG" />
+      </div>
+
+      <div class="basis-1/2 lg:grow md:basis-5/12 flex flex-col justify-center">
+        <p class="font-serif text-white text-lg lg:ml-20 md:ml-15">
+          Здравствуйте! Я Милена, астролог с двадцатилетним стажем. Мой путь
+          начинался с изучения натальной астрологии, Таро и Рун. Долгое время я
+          считала эти системы самыми надежными и рабочими, пока в 2005 году не
+          познакомилась с хораром... Это была настоящее открытие! Ответы
+          поражали своей четкостью и безупречной точностью! Они давали всю
+          необходимую информацию, показывали, как именно будут развиваться
+          события. С этого времени хорарная астрология стала важной частью моей
+          жизни. С ее помощью я могу:
+        </p>
+
+        <ul
+          class="font-serif text-white text-lg list-disc lg:ml-24 md:ml:18 space-y-2 my-7"
+        >
+          <li>дать ответ практически на все жизненные вопросы</li>
+          <li>расскать правду о ваших близких и партнерах по бизнесу</li>
+          <li>предупредить негативные последствия</li>
+          <li>
+            обратить ваше внимание на важные нюансы, от которых зависит будущее
+          </li>
+          <li>определить ваши склонности, способности и таланты</li>
+          <li>составить медицинский прогноз</li>
+          <li>обратиться за советом к высшим силам</li>
+        </ul>
+      </div>
+    </div>
+    <footer
+      class="flex flex-row justify-center flex-wrap my-5"
+      style="background-image: url('purplenight.jpg')"
+    >
+      <div class="w-7 h-7 m-2 border-2 bg-white">
+        <img src="social.png" class="w-full" />
+      </div>
+      <div class="w-7 h-7 m-2 bg-white border-2">
+        <img src="instagram.png" class="w-full" />
+      </div>
+      <div
+        class="w-full text-white text-center italic text-xl"
+        style="
+          text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+            1px 1px 0 #000;
+        "
+      >
+        milenakovalska@gmail.com
+      </div>
+      <img src="venzel.png" />
+    </footer>
+  </body>
+</html>

@@ -50,6 +50,7 @@
       <button
         x-on:click="open= ! open"
         class="flex flex-col justify-start my-1 mx-1 relative lg:hidden"
+        aria-label="Gamburger-menu"
       >
         <div :class="open?'':'space-y-3'" class="h-9 w-9">
           <span
@@ -73,7 +74,7 @@
         <ul class="flex flex-col h-full space-y-14">
           <li><a href="aboutme.html">Обо мне</a></li>
           <li><a href="forecast.html">Предсказания</a></li>
-          <li><a href="">Консультации</a></li>
+          <li><a href="consalt.html">Консультации</a></li>
           <li><a href="">Обучение</a></li>
           <li><a href="">Помощь на каждый день</a></li>
         </ul>
@@ -94,11 +95,12 @@
       class="w-full lg:w-4/5 mt-12 bg-gradient-to-b from-slate-900 to-blue-950 lg:bg-amber-50 flex flex-row flex-wrap justify-center mx-auto"
     >
       <div class="w-full lg:w-24/50 relative lg:m-1 mt-1 mb-0.5 mx-1 border-2">
-        <img src="vozrastbr.png" class="z-0 w-full" />
+        <img src="vozrastbr.png" alt="возраст" class="z-0 w-full" />
         <div
           class="flex flex-col justify-center w-full absolute top-0 left-0 h-full z-10"
         >
-          <h3
+          <a
+            href=""
             class="text-center font-serif text-xs lg:text-lg tracking-wide md:text-lg text-white"
             style="
               text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
@@ -106,18 +108,19 @@
             "
           >
             ТРИ ПЕРИОДА ЖИЗНИ В ГОРОСКОПЕ. МОЛОДОСТЬ, ЗРЕЛЫЕ ГОДЫ И СТАРОСТЬ.
-          </h3>
+          </a>
         </div>
       </div>
 
       <div
         class="w-full lg:w-24/50 relative lg:m-1 mt-0.5 mb-0.5 mx-1 border-2"
       >
-        <img src="planety.png" class="z-0 w-full" />
+        <img src="planety.png" alt="планеты" class="z-0 w-full" />
         <div
           class="flex flex-col justify-center w-full absolute top-0 left-0 h-full z-10"
         >
-          <h3
+          <a
+            href=""
             class="text-center font-serif text-xs lg:text-lg tracking-wide md:text-lg text-white"
             style="
               text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
@@ -125,17 +128,18 @@
             "
           >
             ПЛАНЕТЫ В ПЕРВОМ ДОМЕ.СУДЬБА, ВНЕШНОСТЬ, СПОСОБНОСТИ.
-          </h3>
+          </a>
         </div>
       </div>
       <div
         class="w-full lg:w-24/50 relative lg:m-1 mt-0.5 mb-0.5 mx-1 border-2"
       >
-        <img src="lunasan.png" class="z-0 w-full" />
+        <img src="lunasan.png" alt="светила" class="z-0 w-full" />
         <div
           class="flex flex-col justify-center absolute top-0 left-0 w-full h-full z-10"
         >
-          <h3
+          <a
+            href=""
             class="text-center font-serif text-xs lg:text-lg tracking-wide md:text-lg text-white"
             style="
               text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
@@ -143,17 +147,18 @@
             "
           >
             ЛУНА И СОЛНЦЕ КАК СИМВОЛЫ ЖИЗНЕННОЙ СТОЙКОСТИ.
-          </h3>
+          </a>
         </div>
       </div>
       <div
         class="w-full lg:w-24/50 relative lg:m-1 mt-0.5 mb-0.5 mx-1 border-2"
       >
-        <img src="kameshki.png" class="z-0 w-full" />
+        <img src="kameshki.png" alt="камни" class="z-0 w-full" />
         <div
           class="flex flex-col justify-center absolute top-0 left-0 w-full h-full z-10"
         >
-          <h3
+          <a
+            href=""
             class="text-center font-serif text-xs lg:text-lg tracking-wide md:text-lg text-white"
             style="
               text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
@@ -161,17 +166,18 @@
             "
           >
             ЭНЕРГИЯ КАМНЕЙ. КАК ПРАВИЛЬНО НОСИТЬ ЮВЕЛИРНЫЕ УКРАШЕНИЯ.
-          </h3>
+          </a>
         </div>
       </div>
       <div
         class="w-full lg:w-24/50 relative lg:m-1 mt-0.5 mb-0.5 mx-1 border-2"
       >
-        <img src="dengi.png" class="z-0 w-full" />
+        <img src="dengi.png" alt="деньги" class="z-0 w-full" />
         <div
           class="flex flex-col justify-center absolute top-0 left-0 w-full h-full z-10"
         >
-          <h3
+          <a
+            href=""
             class="text-center font-serif text-xs lg:text-lg tracking-wide md:text-lg text-white"
             style="
               text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
@@ -179,17 +185,18 @@
             "
           >
             ВТОРОЙ ДОМ ГОРОСКОПА.ПОКАЗАТЕЛЬ ДОСТАТКА И БЛАГОПОЛУЧИЯ.
-          </h3>
+          </a>
         </div>
       </div>
       <div
         class="w-full lg:w-24/50 relative lg:m-1 mt-0.5 mb-0.5 mx-1 border-2"
       >
-        <img src="znaki.png" class="z-0 w-full" />
+        <img src="znaki.png" alt="знаки" class="z-0 w-full" />
         <div
           class="flex flex-col justify-center absolute top-0 left-0 w-full h-full z-10"
         >
-          <h3
+          <a
+            href=""
             class="text-center font-serif text-xs lg:text-lg tracking-wide md:text-lg text-white"
             style="
               text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
@@ -197,7 +204,7 @@
             "
           >
             ЧТО НАВЕРХУ, ТО И ВНИЗУ. ДРЕРВНИЕ МУДРЕЦЫ О ЗНАКАХ СВЫШЕ.
-          </h3>
+          </a>
         </div>
       </div>
     </div>

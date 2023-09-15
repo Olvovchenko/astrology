@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Milena Astrology</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.3/dist/cdn.min.js"
+    ></script>
+  </head>
+  <body
+    x-data="{open: false}"
+    class="bg-cover w-full h-full"
+    x-bind:class="{'bg-stars-one' :!open, 'md:bg-blue-tree':open,'bg-sky-one': open}"
+  >
+    <header
+      x-bind:class="{ 'h-screen':open,'flex-row':!open, 'flex-col':open, 'items-end':open}"
+      class="flex justify-between w-screen md:px-3 lg:w-full"
+    >
+      <div
+        x-bind:class="{'hidden':open}"
+        class="lg:my-12 lg:w-full flex flex-col lg:items-center space-y-2 lg:space-y-4"
+      >
+        <h1
+          class="font-serif text-2xl my-1 lg:my-3 lg:text-4xl tracking-wide text-white"
+          style="
+            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+              1px 1px 0 #000;
+          "
+        >
+          MILENA KOVALSKA
+        </h1>
+        <p
+          class="font-serif text-xs leading-3 my-1 md:text-lg lg:text-lg tracking-wide text-white"
+          style="
+            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+              1px 1px 0 #000;
+          "
+        >
+          МАСТЕР ХОРАРНОЙ АСТРОЛОГИИ
+        </p>
+      </div>
+
+      <button
+        x-on:click="open= ! open"
+        class="flex flex-col justify-start my-1 mx-1 relative lg:hidden"
+      >
+        <div :class="open?'':'space-y-3'" class="h-9 w-9">
+          <span
+            x-bind:class="{'rotate-45':open, 'absolute':open,'top-2.5':open}"
+            class="block w-8 h-0.5 bg-white"
+          ></span>
+          <span
+            x-bind:class="{'hidden':open}"
+            class="block w-8 h-0.5 bg-white"
+          ></span>
+          <span
+            x-bind:class="{'-rotate-45':open,'absolute':open, 'top-2.5':open}"
+            class="block w-8 h-0.5 bg-white absolute"
+          ></span>
+        </div>
+      </button>
+      <div
+        x-bind:class="{'hidden':!open}"
+        class="h-5/6 w-3/4 text-center text-2xl pt-20 rounded-xl text-white self-center"
+      >
+        <ul class="flex flex-col h-full space-y-14">
+          <li><a href="">Обо мне</a></li>
+          <li><a href="">Предсказания</a></li>
+          <li><a href="">Консультации</a></li>
+          <li><a href="">Обучение</a></li>
+          <li><a href="">Помощь на каждый день</a></li>
+        </ul>
+      </div>
+      <div class="h-9" x-bind:class="{'hidden':!open}"></div>
+    </header>
+    <nav
+      class="hidden lg:w-full xl:max-w-screen-xl xl:mx-auto 2xl:mx-auto 2xl:max-w-screen-xl lg:flex lg:z-10 lg:flex-row lg:justify-around text-lg text-white"
+    >
+      <a href="aboutme.html">Обо мне</a>
+      <a href="">Предсказания</a>
+      <a href="">Консультации</a>
+      <a href="">Обучение</a>
+      <a href="">Помощь на каждый день</a>
+    </nav>
+    <div
+      x-bind:class="{'hidden':open}"
+      class=" lg:w-10/12 md:w-full xl:max-w-screen-xl 2xl:max-w-screen-xl mx-auto mt-20 flex md:flex-row md:flex-wrap justify-center gap-3.5 flex-col"
+    >
+      <div
+        class="bg-gradient-to-b from-slate-900 to-blue-950 w-80 h-80 flex flex-col justify-center rounded-lg text-md text-white border-2 border-white"
+      >
+        <div class="text-center px-2">
+          <div class="h-7 mb-7">
+            <span class="text-lg font-semibold">Любовный прогноз - 15$</span>
+          </div>
+          <div>
+            <p>
+              Как будут развиваться наши отношения? Встречу ли я свою половинку
+              и когда? Как он ко мне относится? Выйдем ли мы из кризиса?
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="bg-gradient-to-b from-slate-900 to-blue-950 w-80 h-80 flex items-center rounded-lg text-md text-white border-2 border-white"
+      >
+        <div class="text-center px-2">
+          <div class="h-7 mb-7">
+            <span class="text-lg font-semibold"
+              >Финансовые перспективы - 17$</span
+            >
+          </div>
+          <div>
+            <p>
+              Долгосрочный и краткосрочный финансовый прогноз.Перспективы
+              развития бизнеса Сферы, благоприятные для заработка.Время
+              получения прибыли.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="bg-gradient-to-b from-slate-900 to-blue-950 w-80 h-80 flex items-center rounded-lg text-md text-white border-2 border-white"
+      >
+        <div class="text-center px-2">
+          <div class="h-7 mb-7">
+            <span class="text-lg font-semibold"
+              >Работа. Оценка и прогноз -16$</span
+            >
+          </div>
+          <div>
+            <p>
+              Когда я найду работу? Возьмут ли меня на эту работу? Ждет ли меня
+              повышение? Удастся ли мне удержаться? Какую работу выбрать? Стоит
+              ли менять работу (направление)?
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="bg-gradient-to-b from-slate-900 to-blue-950 w-80 h-80 flex items-center rounded-lg text-md text-white border-2 border-white"
+      >
+        <div class="text-center px-2">
+          <div class="h-7 mb-7">
+            <span class="text-lg font-semibold"
+              >Бизнес. Оценка и перспективы - 16$</span
+            >
+          </div>
+          <div>
+            <p>
+              Финансовый прогноз. Анализ деловых отношений. Диагностика сферы деятельности<div class=""></div>
+Оценка конкурентов.
+            </p>
+          </div>
+        </div>
+      </div>
+        <div
+        class="bg-gradient-to-b from-slate-900 to-blue-950 w-80 h-80 flex items-center rounded-lg text-md text-white border-2 border-white"
+      >
+        <div class="text-center px-2">
+          <div class="h-7 mb-7">
+            <span class="text-lg font-semibold"
+              >Друзья и родственники. Важные моменты - 10$</span
+            >
+          </div>
+          <div>
+            <p>
+              Проблемы. Отношения.Перспективы.
+
+            </p>
+          </div>
+        </div>
+      </div>
+              <div
+        class="bg-gradient-to-b from-slate-900 to-blue-950 w-80 h-80 flex items-center rounded-lg text-md text-white border-2 border-white"
+      >
+        <div class="text-center px-2">
+          <div class="h-7 mb-7">
+            <span class="text-lg font-semibold"
+              >Крупные покупки. Диагностика - 15$</span
+            >
+          </div>
+          <div>
+            <p>
+              Стоит ли покупать недвижимость (квартиру, участок)? Когда я куплю квартиру?
+Смогу ли я продать квартиру, участок? Стоит ли покупать этот автомобиль (мотоцикл, оборудование)?
+
+            </p>
+          </div>
+        </div>
+      </div>
+         <div
+        class="bg-gradient-to-b from-slate-900 to-blue-950 w-80 h-80 flex items-center rounded-lg text-md text-white border-2 border-white"
+      >
+        <div class="text-center px-2">
+          <div class="h-7 mb-7">
+            <span class="text-lg font-semibold"
+              >Обучение. Перспективы - 15$</span
+            >
+          </div>
+          <div>
+            <p>
+              Стоит ли мне идти на курсы? Поможет ли мне это образование? Поступит ли мой ребенок в ВУЗ?
+              Профориентация.
+
+            </p>
+          </div>
+        </div>
+      </div>
+               <div
+        class="bg-gradient-to-b from-slate-900 to-blue-950 w-80 h-80 flex items-center rounded-lg text-md text-white border-2 border-white"
+      >
+        <div class="text-center px-2">
+          <div class="h-7 mb-7">
+            <span class="text-lg font-semibold"
+              >Смена места жительства. Прогноз - 12$</span
+            >
+          </div>
+          <div>
+            <p>
+              Стоит ли мне переезжать? К чему приведет эммиграция? Дадут ли мне визу?
+
+            </p>
+          </div>
+        </div>
+      </div>
+                     <div
+        class="bg-gradient-to-b from-slate-900 to-blue-950 w-80 h-80 flex items-center rounded-lg text-md text-white border-2 border-white"
+      >
+        <div class="text-center px-2">
+          <div class="h-7 mb-7">
+            <span class="text-lg font-semibold"
+              >Здоровье и самочувствие - 12$</span
+            >
+          </div>
+          <div>
+            <p>
+              Пойду ли я на поправку? Когда кончится кризис? Когда я забеременею?
+
+            </p>
+          </div>
+        </div>
+      </div>
+                           <div
+        class="bg-gradient-to-b from-slate-900 to-blue-950 w-80 h-80 flex items-center rounded-lg text-md text-white border-2 border-white"
+      >
+        <div class="text-center px-2">
+          <div class="h-7 mb-7">
+            <span class="text-lg font-semibold"
+              >Жизненный путь - 20$</span
+            >
+          </div>
+          <div>
+            <p>
+              Обширное предсказание на основе хорара и натальной карты рождения.
+
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer
+      class="flex flex-row justify-center flex-wrap mt-5"
+      style="background-image: url('purplenight.jpg')"
+    >
+      <div class="w-7 h-7 m-2 border-2 bg-white">
+        <img src="social.png" class="w-full" />
+      </div>
+      <div class="w-7 h-7 m-2 bg-white border-2">
+        <img src="instagram.png" class="w-full" />
+      </div>
+      <div
+        class="w-full text-white text-center italic text-xl"
+        style="
+          text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+            1px 1px 0 #000;
+        "
+      >
+        milenakovalska@gmail.com
+      </div>
+      <img src="venzel.png" />
+    </footer>
+  </body>
+</html>

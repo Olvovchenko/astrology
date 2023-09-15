@@ -10,6 +10,7 @@ module.exports = {
       backgroundImage: {
         "sky-one": "url('../skynight.png')",
         "blue-tree": "url('../bluetree.png')",
+        "stars-one": "url('../zvezdy.png')",
       },
     },
   },

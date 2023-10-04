@@ -914,28 +914,8 @@ video {
 }
 
 @media (min-width: 640px) {
-  .sm\:h-80 {
-    height: 20rem;
-  }
-
-  .sm\:w-80 {
-    width: 20rem;
-  }
-
   .sm\:w-full {
     width: 100%;
-  }
-
-  .sm\:flex-row {
-    flex-direction: row;
-  }
-
-  .sm\:flex-wrap {
-    flex-wrap: wrap;
-  }
-
-  .sm\:gap-0 {
-    gap: 0px;
   }
 }
 
@@ -970,14 +950,6 @@ video {
 
   .md\:justify-around {
     justify-content: space-around;
-  }
-
-  .md\:gap-3 {
-    gap: 0.75rem;
-  }
-
-  .md\:gap-3\.5 {
-    gap: 0.875rem;
   }
 
   .md\:bg-blue-tree {
@@ -1063,12 +1035,12 @@ video {
     width: 80%;
   }
 
-  .lg\:w-full {
-    width: 100%;
-  }
-
   .lg\:w-80 {
     width: 20rem;
+  }
+
+  .lg\:w-full {
+    width: 100%;
   }
 
   .lg\:grow {

@@ -9,10 +9,6 @@
       defer
       src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
     ></script>
-    <script
-      defer
-      src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.3/dist/cdn.min.js"
-    ></script>
   </head>
   <body
     x-data="{open: false}"
@@ -68,14 +64,14 @@
       </button>
       <div
         x-bind:class="{'hidden':!open}"
-        class="h-5/6 w-3/4 text-center text-2xl pt-20 rounded-xl text-white self-center"
+        class="h-3/6 w-3/4 text-center text-2xl pt-20 rounded-xl text-white self-center"
       >
-        <ul class="flex flex-col h-full space-y-14">
+        <ul class="flex flex-col h-full space-y-5">
           <li><a href="">Обо мне</a></li>
           <li><a href="forecast.html">Предсказания</a></li>
           <li><a href="">Консультации</a></li>
-          <li><a href="">Обучение</a></li>
-          <li><a href="">Помощь на каждый день</a></li>
+          <li><a href="index.html">Астроблог</a></li>
+          <li><a href="#mycont">Контакты</a></li>
         </ul>
       </div>
       <div class="h-9" x-bind:class="{'hidden':!open}"></div>

@@ -66,24 +66,21 @@
         x-bind:class="{'hidden':!open}"
         class="h-3/6 w-3/4 text-center text-2xl pt-20 rounded-xl text-white self-center"
       >
-        <ul class="flex flex-col h-full space-y-14">
-          <li><a href="">Обо мне</a></li>
-          <li><a href="forecast.html">Предсказания</a></li>
-          <li><a href="">Консультации</a></li>
-          <li><a href="index.html">Астроблог</a></li>
-          <li><a href="#mycont">Контакты</a></li>
+        <ul class="flex flex-col h-full space-y-14" x-data="navmenu">
+          <template x-for="(menu, index) in menues" :key="index">
+            <li><a href="menu.address" x-text="menu.text"></a></li>
+          </template>
         </ul>
       </div>
       <div class="h-9" x-bind:class="{'hidden':!open}"></div>
     </header>
     <nav
-      class="hidden lg:w-full xl:max-w-screen-xl xl:mx-auto 2xl:mx-auto 2xl:max-w-screen-xl lg:flex lg:z-10 lg:flex-row lg:justify-around text-lg text-white"
+      class="hidden lg:w-full xl:max-w-screen-xl xl:mx-auto 2xl:mx-auto 2xl:max-w-screen-xl lg:flex lg:flex-row lg:justify-around text-lg text-white"
+      x-data="navmenu"
     >
-      <a href="">Обо мне</a>
-      <a href="forecast.html">Предсказания</a>
-      <a href="consalt.html">Консультации</a>
-      <a href="index.html">Астроблог</a>
-      <a href="#mycont">Контакты</a>
+      <template x-for="(menu, index) in menues" :key="index">
+        <a href="menu.address" x-text="menu.text"></a>
+      </template>
     </nav>
     <div
       x-bind:class="{'hidden':open}"
@@ -150,4 +147,17 @@
       <img src="venzel.png" />
     </footer>
   </body>
+  <script>
+    document.addEventListener("alpine:init", () => {
+      Alpine.data("navmenu", () => ({
+        menues: [
+          { address: "aboutme.html", text: "Обо мне" },
+          { address: "forecast.html", text: "Предсказания" },
+          { address: "newconsalt.html", text: "Консультации" },
+          { address: "index.html", text: "Астроблог" },
+          { address: "#mycont", text: "Контакты" },
+        ],
+      }));
+    });
+  </script>
 </html>

@@ -66,15 +66,12 @@
         x-bind:class="{'hidden':!open}"
         class="h-5/6 w-3/4 text-center text-2xl pt-20 rounded-xl text-white self-center"
       >
-        <ul class="flex flex-col h-full space-y-14">
-          <li><a href="">Обо мне</a></li>
-          <li><a href="">Предсказания</a></li>
-          <li><a href="">Консультации</a></li>
-          <li><a href="">Обучение</a></li>
-          <li><a href="">Помощь на каждый день</a></li>
+        <ul class="flex flex-col h-full space-y-14" x-data="navmenu">
+          <template x-for="(menu, index) in menues" :key="index">
+            <li><a href="menu.address" x-text="menu.text"></a></li>
+          </template>
         </ul>
       </div>
-      <div class="h-9" x-bind:class="{'hidden':!open}"></div>
     </header>
     <nav
       class="hidden lg:w-full xl:max-w-screen-xl xl:mx-auto 2xl:mx-auto 2xl:max-w-screen-xl lg:flex lg:flex-row lg:justify-around text-lg text-white"

@@ -66,50 +66,54 @@
         x-bind:class="{'hidden':!open}"
         class="h-5/6 w-3/4 text-center text-2xl pt-20 rounded-xl text-white self-center"
       >
-        <ul class="flex flex-col h-full space-y-14" x-data="navmenu">
+        <ul class="flex flex-col h-full space-y-14 font-sans" x-data="navmenu">
           <template x-for="(menu, index) in menues" :key="index">
-            <li><a href="menu.address" x-text="menu.text"></a></li>
+            <li><a x-bind:href="menu.address" x-text="menu.text"></a></li>
           </template>
         </ul>
       </div>
     </header>
     <nav
-      class="hidden lg:w-full xl:max-w-screen-xl xl:mx-auto 2xl:mx-auto 2xl:max-w-screen-xl lg:flex lg:flex-row lg:justify-around text-lg text-white"
+      class="hidden lg:w-full xl:max-w-screen-xl xl:mx-auto 2xl:mx-auto 2xl:max-w-screen-xl lg:flex lg:flex-row lg:justify-around text-xl text-white font-sans"
       x-data="navmenu"
     >
       <template x-for="(menu, index) in menues" :key="index">
-        <a href="menu.address" x-text="menu.text"></a>
+        <a x-bind:href="menu.address" x-text="menu.text"></a>
       </template>
     </nav>
     <div
       x-bind:class="{'hidden':open}"
       x-data="consults"
-      class="items-center w-full sm:w-full lg:w-10/12 md:w-10/12 xl:max-w-screen-xl 2xl:max-w-screen-xl mx-auto mt-20 flex justify-center gap-3.5 flex-col lg:flex-row lg:flex-wrap"
+      class="items-center w-full lg:w-10/12 xl:max-w-screen-xl 2xl:max-w-screen-xl mx-auto mt-20 flex justify-center gap-3.5 flex-col sm:flex-row sm:flex-wrap"
     >
       <template x-for="(card, index) in cards" :key="index">
-        <div
-          class="bg-gradient-to-b from-slate-900 to-blue-950 w-4/5 h-64 lg:w-80 lg:h-80 flex flex-col justify-center items-center rounded-lg text-md text-white border-2 border-white"
-        >
-          <div class="text-center px-2">
-            <div class="h-7 mb-7">
-              <span x-text="card.head" class="text-lg font-semibold"></span>
-            </div>
-            <div>
-              <p x-text="card.text"></p>
+        <a href="kontackt.html" class="w-full sm:w-auto">
+          <div
+            class="bg-gradient-to-b from-slate-900 to-blue-950 w-full h-60 sm:h-80 sm:w-64 lg:w-80 flex flex-col justify-start pt-12 items-center rounded-lg text-base sm:text-sm lg:text-base text-white hover:text-orange-100 border-2 border-white hover:border-blue-500"
+          >
+            <div class="text-center px-2">
+              <div class="h-7 mb-7">
+                <span x-text="card.head" class="text-lg font-semibold"></span>
+              </div>
+              <div>
+                <p x-text="card.text"></p>
+              </div>
             </div>
           </div>
-        </div>
+        </a>
       </template>
     </div>
 
     <footer
+      x-bind:class="{'hidden':open}"
       id="mycont"
       class="flex flex-row justify-center flex-wrap mt-5"
       style="background-image: url('purplenight.jpg')"
     >
-      <div class="w-7 h-7 m-2 border-2 bg-white">
-        <img src="social.png" class="w-full" />
-      </div>
+      <a href="https://www.facebook.com/astrolog.esoteric/?locale=ms_MY"
+        ><div class="w-7 h-7 m-2 border-2 bg-white">
+          <img src="social.png" class="w-full" /></div
+      ></a>
       <div class="w-7 h-7 m-2 bg-white border-2">
         <img src="instagram.png" class="w-full" />
       </div>
@@ -135,7 +139,7 @@
           },
           {
             head: "Финансовые перспективы - 17$",
-            text: "Долгосрочный и краткосрочный финансовый прогноз.Перспективы развития бизнеса Сферы, благоприятные для заработка.Время получения прибыли.",
+            text: "Долгосрочный и краткосрочный финансовый прогноз. Перспективы развития бизнеса. Сферы, благоприятные для заработка. Время получения прибыли.",
           },
           {
             head: "Работа. Оценка и прогноз -16$",
@@ -181,7 +185,7 @@
           { address: "forecast.html", text: "Предсказания" },
           { address: "newconsalt.html", text: "Консультации" },
           { address: "index.html", text: "Астроблог" },
-          { address: "#mycont", text: "Контакты" },
+          { address: "kontackt.html", text: "Контакты" },
         ],
       }));
     });

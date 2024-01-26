@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Milena Astrology</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+  </head>
+  <body
+    x-data="{open: false}"
+    class="bg-cover w-full h-full"
+    x-bind:class="{'bg-gradient-to-b from-slate-900 to-blue-950' :!open, 'md:bg-blue-tree':open,'bg-sky-one': open}"
+  >
+    <header
+      x-bind:class="{ 'h-screen':open, 'items-center':open}"
+      class="flex flex-col justify-between w-screen md:px-3 lg:w-full"
+    >
+      <div class="flex flex-col justify-start w-full">
+        <button
+          x-on:click="open= ! open"
+          class="flex flex-col justify-start my-4 mx-1 fixed top-0 right-0"
+          aria-label="Gamburger-menu"
+        >
+          <div :class="open?'':'space-y-3'" class="h-9 w-9">
+            <span
+              x-bind:class="{'rotate-45':open, 'absolute':open,'top-2.5':open}"
+              class="block w-8 h-0.5 bg-white"
+            ></span>
+            <span
+              x-bind:class="{'hidden':open}"
+              class="block w-8 h-0.5 bg-white"
+            ></span>
+            <span
+              x-bind:class="{'-rotate-45':open,'absolute':open, 'top-2.5':open}"
+              class="block w-8 h-0.5 bg-white absolute"
+            ></span>
+          </div>
+        </button>
+
+        <div
+          x-bind:class="{'hidden':!open}"
+          class="flex flex-col self-center space-y-2 text-center"
+        >
+          <h1
+            class="font-serif text-2xl my-1 lg:my-3 lg:text-4xl tracking-wide text-white"
+            style="
+              text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+                1px 1px 0 #000;
+            "
+          >
+            MILENA KOVALSKA
+          </h1>
+          <h2
+            class="font-serif text-xs leading-3 my-1 md:text-lg lg:text-lg tracking-wide text-white"
+            style="
+              text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+                1px 1px 0 #000;
+            "
+          >
+            МАСТЕР ХОРАРНОЙ АСТРОЛОГИИ
+          </h2>
+        </div>
+      </div>
+
+      <div
+        x-bind:class="{'hidden':!open}"
+        class="w-3/4 text-center text-2xl text-white self-center"
+      >
+        <ul class="flex flex-col h-full space-y-10 font-sans" x-data="navmenu">
+          <template x-for="(menu, index) in menues" :key="index">
+            <li><a x-bind:href="menu.address" x-text="menu.text"></a></li>
+          </template>
+        </ul>
+      </div>
+      <div class="h-9" x-bind:class="{'hidden':!open}"></div>
+    </header>
+
+    <div
+      x-bind:class="{'hidden':open}"
+      class="w-full mt-3 bg-gradient-to-b from-slate-900 to-blue-950 lg:bg-amber-50 mx-auto flex flex-row justify-center"
+    >
+      <div
+        class="mt-14 bg-slate-300 md:bg-white p-5 text-gray-800 w-full md:w-9/12 border-double border-4 border-gray-900 font-sans text-base"
+      >
+        <h2
+          class="font-serif text-base text-violet-950 mt-1 mb-10 md:text-2xl lg:text-2xl text-center text-gray-900"
+        >
+          ЧТО НАВЕРХУ, ТО И ВНИЗУ. ДРЕВНИЕ МУДРЕЦЫ О ЗНАКАХ СВЫШЕ
+        </h2>
+        <img
+          src="eye.jpg"
+          alt="взгляд"
+          class="w-full mr-5 lg:w-8/12 mt-2 lg:float-left"
+        />
+
+        <p class="font-semibold mt-0.5">
+          Древние мудрецы и философы справедливо считали, что будущие события
+          всегда отражаются в настоящем. И внимательные люди могут узнать
+          многое. Индийские астрологи разработали целую науку — НИМИТТУ, с
+          помощью которой можно увидеть важные изменения.
+        </p>
+
+        <p class="mt-5">
+          Они считали, что Вселенная посылает предупреждения. Так, если мы
+          планируем путешествие и по дороге в туристическое агентство слышим
+          радостный смех — поездка будет легкой и приятной. Если хотим вложить
+          деньги в бизнес и встречаем по дороге нищего — это серьезное
+          предупреждение, что так делать не надо. Особенно если негативные
+          предвестники повторяются.
+        </p>
+
+        <ul class="mt-5 list-disc">
+          В этой статье я перечислю знаки, связанные с основными планетами и их
+          значениями. Они проявляются тогда, когда мы
+          <li class="ml-5 mt-3">задумали какое-то дело</li>
+          <li class="ml-5">
+            находимся в начале какого-либо события (например, свадьба — как
+            начало брака)
+          </li>
+          <li class="ml-5">
+            мысленно задали вопрос: «К чему приведет эта ситуация?»
+          </li>
+        </ul>
+        <p class="mt-5">
+          <span class="text-purple-800 font-semibold">Знаки Юпитера</span> — это
+          маленькие дети, крупные мужчины, священнослужители, подарки, монеты,
+          все, что связанно с роскошью и изобилием (дорогие машины, украшения и
+          др.)
+        </p>
+        <p class="mt-5">
+          К примеру, вы устраиваетесь на новую работу и в первый рабочий день
+          получаете подарок от кого-то из родственников. Это означает, что ваше
+          новое место службы будет доходным.
+        </p>
+        <p class="mt-5">
+          <span class="text-purple-800 font-semibold">Знаки Венеры</span> —
+          красивые букеты цветов, смех, влюбленные пары, улыбающиеся люди.
+          Например, вы хотите узнать, как будут развиваться ваши отношения и
+          видите человека, несущего букет цветов и подарки. Таким образом
+          Вселенная предупреждает о том, что все будет просто прекрасно!
+        </p>
+
+        <p class="mt-5">
+          А теперь о негативных предвестниках.
+          <span class="text-purple-800 font-semibold">Знаки Сатурна</span> —
+          нищие, вороны и другие птицы, кошки, люди в черном, люди с увечьями,
+          старики и чернорабочие.
+          <span class="text-purple-800 font-semibold">Знаки Марса </span>— звуки
+          ссоры, гром, молния, поваленные деревья, крики, драка.
+        </p>
+        <p class="mt-5">
+          Такие явления предупреждают о тяжелых временах. К примеру, человек
+          идет сдавать экзамен и слышит звуки грома. Затем встречает нищего,
+          который просит у него подаяние. Скорее всего, экзамен придется
+          пересдавать.
+        </p>
+        <p class="mt-5 font-semibold">
+          Вот основные правила, которые успешно использовали древние ученые. Вы
+          можете их легко применять в повседневной жизни. Если же вопрос слишком
+          серьезный и вы эмоционально вовлечены, обращайтесь к хорарному
+          астрологу. Я гарантирую грамотный подход и четкое видение ситуации!
+        </p>
+      </div>
+    </div>
+
+    <div class="group relative w-full overflow-hidden h-48">
+      <div
+        x-bind:class="{'hidden':open}"
+        class="group-hover:pause animate-slide-delay mt-0.5 bg-gradient-to-b from-slate-900 to-blue-950 lg:bg-amber-50 flex flex-row absolute top-0"
+        x-data="astroblog"
+        style="width: 1400px"
+      >
+        <template x-for="(blog,index) in blogs" :key="index">
+          <div
+            class="w-full lg:w-24/50 relative lg:m-1 mt-1 mb-0.5 mx-1 border-2 hover:border-4 text-center font-serif text-xs lg:text-lg tracking-wide md:text-lg text-white"
+          >
+            <img
+              x-bind:src="blog.image"
+              x-bind:alt="blog.alt"
+              class="z-0 w-full"
+            />
+            <div
+              class="flex flex-col justify-center w-full absolute top-0 left-0 h-full z-10 text-center font-serif text-xs lg:text-lg tracking-wide md:text-lg text-white"
+            >
+              <a
+                x-bind:href="blog.href"
+                x-text="blog.head"
+                class=""
+                style="
+                  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000,
+                    -1px 1px 0 #000, 1px 1px 0 #000;
+                "
+              >
+              </a>
+              <a
+                x-bind:href="blog.href"
+                x-text="blog.text"
+                class=""
+                style="
+                  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000,
+                    -1px 1px 0 #000, 1px 1px 0 #000;
+                "
+              >
+              </a>
+            </div>
+          </div>
+        </template>
+      </div>
+
+      <div
+        x-bind:class="{'hidden':open}"
+        class="group-hover:pause animate-scroll-slide mt-0.5 bg-gradient-to-b from-slate-900 to-blue-950 lg:bg-amber-50 flex flex-row absolute top-0"
+        x-data="astroblog"
+        style="width: 1400px"
+      >
+        <template x-for="(blog,index) in blogs" :key="index">
+          <div
+            class="w-full lg:w-24/50 relative lg:m-1 mt-1 mb-0.5 mx-1 border-2 hover:border-4 text-center font-serif text-xs lg:text-lg tracking-wide md:text-lg text-white"
+          >
+            <img
+              x-bind:src="blog.image"
+              x-bind:alt="blog.alt"
+              class="z-0 w-full"
+            />
+            <div
+              class="flex flex-col justify-center w-full absolute top-0 left-0 h-full z-10 text-center font-serif text-xs lg:text-lg tracking-wide md:text-lg text-white"
+            >
+              <a
+                x-bind:href="blog.href"
+                x-text="blog.head"
+                class=""
+                style="
+                  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000,
+                    -1px 1px 0 #000, 1px 1px 0 #000;
+                "
+              >
+              </a>
+              <a
+                x-bind:href="blog.href"
+                x-text="blog.text"
+                class=""
+                style="
+                  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000,
+                    -1px 1px 0 #000, 1px 1px 0 #000;
+                "
+              >
+              </a>
+            </div>
+          </div>
+        </template>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  document.addEventListener("alpine:init", () => {
+    Alpine.data("navmenu", () => ({
+      menues: [
+        { address: "aboutme.html", text: "Обо мне" },
+        { address: "forecast.html", text: "Предсказания" },
+        { address: "newconsalt.html", text: "Консультации" },
+        { address: "index.html", text: "Астроблог" },
+        { address: "kontackt.html", text: "Контакты" },
+      ],
+    }));
+  });
+</script>
+<script>
+  document.addEventListener("alpine:init", () => {
+    Alpine.data("astroblog", () => ({
+      blogs: [
+        {
+          image: "vozrastbr.png",
+          alt: "возраст",
+          head: "ТРИ ПЕРИОДА ЖИЗНИ В ГОРОСКОПЕ.",
+          text: "Молодость, зрелые годы и старость.",
+          href: "article1.html",
+        },
+        {
+          image: "planety.png",
+          alt: "планеты",
+          head: "ПЛАНЕТЫ В ПЕРВОМ ДОМЕ.",
+          text: "Судьба, внешность, способности.",
+          href: "article2.html",
+        },
+        {
+          image: "lunasan.png",
+          alt: "светила",
+          head: "ЛУНА И СОЛНЦЕ.",
+          text: " Символы жизненной стойкости.",
+          href: "article3.html",
+        },
+        {
+          image: "kameshki.png",
+          alt: "камни",
+          head: "ЭНЕРГИЯ КАМНЕЙ.",
+          text: " Как правильно носить украшения.",
+          href: "article4.html",
+        },
+        {
+          image: "dengi.png",
+          alt: "деньги",
+          head: "ВТОРОЙ ДОМ ГОРОСКОПА.",
+          text: "Показатель достатка и благополучия.",
+          href: "article5.html",
+        },
+        {
+          image: "znaki.png",
+          alt: "знаки",
+          head: "ЧТО НАВЕРХУ, ТО И ВНИЗУ.",
+          text: " Древние мудрецы о знаках свыше.",
+          href: "article6.html",
+        },
+      ],
+    }));
+  });
+</script>

@@ -67,148 +67,76 @@
         x-bind:class="{'hidden':!open}"
         class="h-5/6 w-3/4 text-center text-2xl pt-20 rounded-xl text-white self-center"
       >
-        <ul class="flex flex-col h-full space-y-14" x-data="navmenu">
+        <ul
+          class="flex flex-col h-full space-y-10 md:space-y-14 font-sans"
+          x-data="navmenu"
+        >
           <template x-for="(menu, index) in menues" :key="index">
-            <li><a href="menu.address" x-text="menu.text"></a></li>
+            <li><a x-bind:href="menu.address" x-text="menu.text"></a></li>
           </template>
         </ul>
       </div>
       <div class="h-9" x-bind:class="{'hidden':!open}"></div>
     </header>
     <nav
-      class="hidden lg:w-full xl:max-w-screen-xl xl:mx-auto 2xl:mx-auto 2xl:max-w-screen-xl lg:flex lg:flex-row lg:justify-around text-lg text-white"
+      class="hidden lg:w-full xl:max-w-screen-xl xl:mx-auto 2xl:mx-auto 2xl:max-w-screen-xl lg:flex lg:flex-row lg:justify-around text-xl text-white font-sans"
       x-data="navmenu"
     >
       <template x-for="(menu, index) in menues" :key="index">
-        <a href="menu.address" x-text="menu.text"></a>
+        <a x-bind:href="menu.address" x-text="menu.text"></a>
       </template>
     </nav>
     <div
       x-bind:class="{'hidden':open}"
       class="w-full lg:w-4/5 mt-12 bg-gradient-to-b from-slate-900 to-blue-950 lg:bg-amber-50 flex flex-row flex-wrap justify-center mx-auto"
+      x-data="astroblog"
     >
-      <div class="w-full lg:w-24/50 relative lg:m-1 mt-1 mb-0.5 mx-1 border-2">
-        <img src="vozrastbr.png" alt="возраст" class="z-0 w-full" />
+      <template x-for="(blog, index) in blogs" :key="index">
         <div
-          class="flex flex-col justify-center w-full absolute top-0 left-0 h-full z-10"
+          class="w-full lg:w-24/50 relative lg:m-1 mt-1 mb-0.5 mx-1 border-2 hover:border-4 text-center font-serif text-xs lg:text-lg tracking-wide md:text-lg text-white"
         >
-          <a
-            href=""
-            class="text-center font-serif text-xs lg:text-lg tracking-wide md:text-lg text-white"
-            style="
-              text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
-                1px 1px 0 #000;
-            "
+          <img
+            x-bind:src="blog.image"
+            x-bind:alt="blog.alt"
+            class="z-0 w-full"
+          />
+          <div
+            class="flex flex-col justify-center w-full absolute top-0 left-0 h-full z-10 text-center font-serif text-xs lg:text-lg tracking-wide md:text-lg text-white"
           >
-            ТРИ ПЕРИОДА ЖИЗНИ В ГОРОСКОПЕ. МОЛОДОСТЬ, ЗРЕЛЫЕ ГОДЫ И СТАРОСТЬ.
-          </a>
+            <a
+              x-bind:href="blog.href"
+              x-text="blog.head"
+              class=""
+              style="
+                text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+                  1px 1px 0 #000;
+              "
+            >
+            </a>
+            <a
+              x-bind:href="blog.href"
+              x-text="blog.text"
+              class=""
+              style="
+                text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+                  1px 1px 0 #000;
+              "
+            >
+            </a>
+          </div>
         </div>
-      </div>
-
-      <div
-        class="w-full lg:w-24/50 relative lg:m-1 mt-0.5 mb-0.5 mx-1 border-2"
-      >
-        <img src="planety.png" alt="планеты" class="z-0 w-full" />
-        <div
-          class="flex flex-col justify-center w-full absolute top-0 left-0 h-full z-10"
-        >
-          <a
-            href=""
-            class="text-center font-serif text-xs lg:text-lg tracking-wide md:text-lg text-white"
-            style="
-              text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
-                1px 1px 0 #000;
-            "
-          >
-            ПЛАНЕТЫ В ПЕРВОМ ДОМЕ.СУДЬБА, ВНЕШНОСТЬ, СПОСОБНОСТИ.
-          </a>
-        </div>
-      </div>
-      <div
-        class="w-full lg:w-24/50 relative lg:m-1 mt-0.5 mb-0.5 mx-1 border-2"
-      >
-        <img src="lunasan.png" alt="светила" class="z-0 w-full" />
-        <div
-          class="flex flex-col justify-center absolute top-0 left-0 w-full h-full z-10"
-        >
-          <a
-            href=""
-            class="text-center font-serif text-xs lg:text-lg tracking-wide md:text-lg text-white"
-            style="
-              text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
-                1px 1px 0 #000;
-            "
-          >
-            ЛУНА И СОЛНЦЕ КАК СИМВОЛЫ ЖИЗНЕННОЙ СТОЙКОСТИ.
-          </a>
-        </div>
-      </div>
-      <div
-        class="w-full lg:w-24/50 relative lg:m-1 mt-0.5 mb-0.5 mx-1 border-2"
-      >
-        <img src="kameshki.png" alt="камни" class="z-0 w-full" />
-        <div
-          class="flex flex-col justify-center absolute top-0 left-0 w-full h-full z-10"
-        >
-          <a
-            href=""
-            class="text-center font-serif text-xs lg:text-lg tracking-wide md:text-lg text-white"
-            style="
-              text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
-                1px 1px 0 #000;
-            "
-          >
-            ЭНЕРГИЯ КАМНЕЙ. КАК ПРАВИЛЬНО НОСИТЬ ЮВЕЛИРНЫЕ УКРАШЕНИЯ.
-          </a>
-        </div>
-      </div>
-      <div
-        class="w-full lg:w-24/50 relative lg:m-1 mt-0.5 mb-0.5 mx-1 border-2"
-      >
-        <img src="dengi.png" alt="деньги" class="z-0 w-full" />
-        <div
-          class="flex flex-col justify-center absolute top-0 left-0 w-full h-full z-10"
-        >
-          <a
-            href=""
-            class="text-center font-serif text-xs lg:text-lg tracking-wide md:text-lg text-white"
-            style="
-              text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
-                1px 1px 0 #000;
-            "
-          >
-            ВТОРОЙ ДОМ ГОРОСКОПА.ПОКАЗАТЕЛЬ ДОСТАТКА И БЛАГОПОЛУЧИЯ.
-          </a>
-        </div>
-      </div>
-      <div
-        class="w-full lg:w-24/50 relative lg:m-1 mt-0.5 mb-0.5 mx-1 border-2"
-      >
-        <img src="znaki.png" alt="знаки" class="z-0 w-full" />
-        <div
-          class="flex flex-col justify-center absolute top-0 left-0 w-full h-full z-10"
-        >
-          <a
-            href=""
-            class="text-center font-serif text-xs lg:text-lg tracking-wide md:text-lg text-white"
-            style="
-              text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
-                1px 1px 0 #000;
-            "
-          >
-            ЧТО НАВЕРХУ, ТО И ВНИЗУ. ДРЕРВНИЕ МУДРЕЦЫ О ЗНАКАХ СВЫШЕ.
-          </a>
-        </div>
-      </div>
+      </template>
     </div>
     <footer
+      x-bind:class="{'hidden':open}"
       id="mycont"
       class="flex flex-row justify-center flex-wrap my-5"
       style="background-image: url('purplenight.jpg')"
     >
-      <div class="w-7 h-7 m-2 border-2 bg-white">
-        <img src="social.png" class="w-full" />
-      </div>
+      <a href="https://www.facebook.com/astrolog.esoteric/?locale=ms_MY"
+        ><div class="w-7 h-7 m-2 border-2 bg-white">
+          <img src="social.png" class="w-full" /></div
+      ></a>
       <div class="w-7 h-7 m-2 bg-white border-2">
         <img src="instagram.png" class="w-full" />
       </div>
@@ -232,7 +160,57 @@
           { address: "forecast.html", text: "Предсказания" },
           { address: "newconsalt.html", text: "Консультации" },
           { address: "index.html", text: "Астроблог" },
-          { address: "#mycont", text: "Контакты" },
+          { address: "kontackt.html", text: "Контакты" },
+        ],
+      }));
+    });
+  </script>
+  <script>
+    document.addEventListener("alpine:init", () => {
+      Alpine.data("astroblog", () => ({
+        blogs: [
+          {
+            image: "vozrastbr.png",
+            alt: "возраст",
+            head: "ТРИ ПЕРИОДА ЖИЗНИ В ГОРОСКОПЕ.",
+            text: "Молодость, зрелые годы и старость.",
+            href: "article1.html",
+          },
+          {
+            image: "planety.png",
+            alt: "планеты",
+            head: "ПЛАНЕТЫ В ПЕРВОМ ДОМЕ.",
+            text: "Судьба, внешность, способности.",
+            href: "article2.html",
+          },
+          {
+            image: "lunasan.png",
+            alt: "светила",
+            head: "ЛУНА И СОЛНЦЕ.",
+            text: " Символы жизненной стойкости.",
+            href: "article3.html",
+          },
+          {
+            image: "kameshki.png",
+            alt: "камни",
+            head: "ЭНЕРГИЯ КАМНЕЙ.",
+            text: " Как правильно носить украшения.",
+            href: "article4.html",
+          },
+          {
+            image: "dengi.png",
+            alt: "деньги",
+            head: "ВТОРОЙ ДОМ ГОРОСКОПА.",
+            text: "Показатель достатка и благополучия.",
+            href: "article5.html",
+          },
+          {
+            image: "znaki.png",
+            alt: "знаки",
+            head: "ЧТО НАВЕРХУ, ТО И ВНИЗУ.",
+            text: " Древние мудрецы о знаках свыше.",
+            href: "article6.html",
+          },
         ],
       }));
     });

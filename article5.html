@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Milena Astrology</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+  </head>
+  <body
+    x-data="{open: false}"
+    class="bg-cover w-full h-full"
+    x-bind:class="{'bg-gradient-to-b from-slate-900 to-blue-950' :!open, 'md:bg-blue-tree':open,'bg-sky-one': open}"
+  >
+    <header
+      x-bind:class="{ 'h-screen':open, 'items-center':open}"
+      class="flex flex-col justify-between w-screen md:px-3 lg:w-full"
+    >
+      <div class="flex flex-col justify-start w-full">
+        <button
+          x-on:click="open= ! open"
+          class="flex flex-col justify-start my-4 mx-1 fixed top-0 right-0"
+          aria-label="Gamburger-menu"
+        >
+          <div :class="open?'':'space-y-3'" class="h-9 w-9">
+            <span
+              x-bind:class="{'rotate-45':open, 'absolute':open,'top-2.5':open}"
+              class="block w-8 h-0.5 bg-white"
+            ></span>
+            <span
+              x-bind:class="{'hidden':open}"
+              class="block w-8 h-0.5 bg-white"
+            ></span>
+            <span
+              x-bind:class="{'-rotate-45':open,'absolute':open, 'top-2.5':open}"
+              class="block w-8 h-0.5 bg-white absolute"
+            ></span>
+          </div>
+        </button>
+
+        <div
+          x-bind:class="{'hidden':!open}"
+          class="flex flex-col self-center space-y-2 text-center"
+        >
+          <h1
+            class="font-serif text-2xl my-1 lg:my-3 lg:text-4xl tracking-wide text-white"
+            style="
+              text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+                1px 1px 0 #000;
+            "
+          >
+            MILENA KOVALSKA
+          </h1>
+          <h2
+            class="font-serif text-xs leading-3 my-1 md:text-lg lg:text-lg tracking-wide text-white"
+            style="
+              text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+                1px 1px 0 #000;
+            "
+          >
+            МАСТЕР ХОРАРНОЙ АСТРОЛОГИИ
+          </h2>
+        </div>
+      </div>
+
+      <div
+        x-bind:class="{'hidden':!open}"
+        class="w-3/4 text-center text-2xl text-white self-center"
+      >
+        <ul class="flex flex-col h-full space-y-10 font-sans" x-data="navmenu">
+          <template x-for="(menu, index) in menues" :key="index">
+            <li><a x-bind:href="menu.address" x-text="menu.text"></a></li>
+          </template>
+        </ul>
+      </div>
+      <div class="h-9" x-bind:class="{'hidden':!open}"></div>
+    </header>
+
+    <div
+      x-bind:class="{'hidden':open}"
+      class="w-full mt-3 bg-gradient-to-b from-slate-900 to-blue-950 lg:bg-amber-50 mx-auto flex flex-row justify-center"
+    >
+      <div
+        class="mt-14 bg-slate-300 md:bg-white p-5 text-gray-800 w-full md:w-9/12 border-double border-4 border-gray-900 font-sans text-base"
+      >
+        <h2
+          class="font-serif text-base text-violet-950 mt-1 mb-10 md:text-2xl lg:text-2xl text-center text-gray-900"
+        >
+          ВТОРОЙ ДОМ ГОРОСКОПА. ПОКАЗАТЕЛЬ ДОСТАТКА И БЛАГОПОЛУЧИЯ
+        </h2>
+        <img
+          src="businessman.jpg"
+          alt="деньги"
+          class="w-full mr-5 lg:w-8/12 mt-2 lg:float-left"
+        />
+
+        <p class="font-semibold mt-0.5">
+          В Древней Греции второй дом гороскопа считался показателем финансов и
+          достатка. Определить этот дом просто — нужно отсчитать второй знак от
+          знака Асцендента.
+        </p>
+        <p class="font-semibold mt-1">
+          Так, если ваш Асцендент находится в знаке Рака, вторым домом будет
+          целый знак Льва. Если Асцендент находится в знаке Девы — второй дом
+          будет занимать целый знак Весов.
+        </p>
+
+        <p class="mt-5">
+          Наличие Юпитера или Венеры во втором доме укажет на достаток. Также
+          хорошо, если Юпитер и Венера делают трин или секстиль к знаку второго
+          дома.
+        </p>
+
+        <p class="mt-5">
+          Марс или Сатурн во втором доме укажут на финансовые трудности. Плохим
+          знаком будет также наличие Марса или Сатурна в оппозиции или квадрате
+          ко второму дому.
+        </p>
+
+        <p class="mt-5">
+          Если второй дом имеет и положительные аспекты (например, трин от
+          Венеры), и отрицательные (например, оппозицию от Марса), смотрим,
+          каких аспектов больше, и на основе этого делаем выводы о финансовом
+          состоянии.
+        </p>
+        <p class="mt-5">
+          Кроме того, для полной картины оцениваем управителя второго дома. Если
+          это благотворная и хорошо аспектированная планета, человек будет иметь
+          хорошие средства к существованию.
+        </p>
+
+        <h3 class="mt-10 lg:text-2xl text-lg md:text-2xl">
+          Пример: Карта Бернарда Эптона
+        </h3>
+        <img
+          src="bernardepton.png"
+          alt="карта Бернарда Эптона"
+          class="lg:float-left mt-2"
+        />
+        <p class="mt-5">
+          В этой карте рождения второй дом приходится на знак Козерога. В нем
+          нет планет, но к этому дому делает трин Юпитер (самая добрая планета в
+          гороскопе). Марс и Сатурн не дают никаких негативных аспектов. Т.е
+          финансовое состояние этого человека будет приумножено, он никогда не
+          будет иметь проблем с деньгами.
+        </p>
+        <p class="mt-5">
+          Кроме того, управитель второго дома Сатурн находится в соединении с
+          Юпитером. Это еще один мощный аргумент в пользу финансового
+          благополучия.
+        </p>
+        <p>
+          В реальной жизни Бернард Эптон был миллионером и успешным адвокатом.
+        </p>
+      </div>
+    </div>
+
+    <div class="group relative w-full overflow-hidden h-48">
+      <div
+        x-bind:class="{'hidden':open}"
+        class="group-hover:pause animate-slide-delay mt-0.5 bg-gradient-to-b from-slate-900 to-blue-950 lg:bg-amber-50 flex flex-row absolute top-0"
+        x-data="astroblog"
+        style="width: 1400px"
+      >
+        <template x-for="(blog,index) in blogs" :key="index">
+          <div
+            class="w-full lg:w-24/50 relative lg:m-1 mt-1 mb-0.5 mx-1 border-2 hover:border-4 text-center font-serif text-xs lg:text-lg tracking-wide md:text-lg text-white"
+          >
+            <img
+              x-bind:src="blog.image"
+              x-bind:alt="blog.alt"
+              class="z-0 w-full"
+            />
+            <div
+              class="flex flex-col justify-center w-full absolute top-0 left-0 h-full z-10 text-center font-serif text-xs lg:text-lg tracking-wide md:text-lg text-white"
+            >
+              <a
+                x-bind:href="blog.href"
+                x-text="blog.head"
+                class=""
+                style="
+                  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000,
+                    -1px 1px 0 #000, 1px 1px 0 #000;
+                "
+              >
+              </a>
+              <a
+                x-bind:href="blog.href"
+                x-text="blog.text"
+                class=""
+                style="
+                  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000,
+                    -1px 1px 0 #000, 1px 1px 0 #000;
+                "
+              >
+              </a>
+            </div>
+          </div>
+        </template>
+      </div>
+
+      <div
+        x-bind:class="{'hidden':open}"
+        class="group-hover:pause animate-scroll-slide mt-0.5 bg-gradient-to-b from-slate-900 to-blue-950 lg:bg-amber-50 flex flex-row absolute top-0"
+        x-data="astroblog"
+        style="width: 1400px"
+      >
+        <template x-for="(blog,index) in blogs" :key="index">
+          <div
+            class="w-full lg:w-24/50 relative lg:m-1 mt-1 mb-0.5 mx-1 border-2 hover:border-4 text-center font-serif text-xs lg:text-lg tracking-wide md:text-lg text-white"
+          >
+            <img
+              x-bind:src="blog.image"
+              x-bind:alt="blog.alt"
+              class="z-0 w-full"
+            />
+            <div
+              class="flex flex-col justify-center w-full absolute top-0 left-0 h-full z-10 text-center font-serif text-xs lg:text-lg tracking-wide md:text-lg text-white"
+            >
+              <a
+                x-bind:href="blog.href"
+                x-text="blog.head"
+                class=""
+                style="
+                  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000,
+                    -1px 1px 0 #000, 1px 1px 0 #000;
+                "
+              >
+              </a>
+              <a
+                x-bind:href="blog.href"
+                x-text="blog.text"
+                class=""
+                style="
+                  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000,
+                    -1px 1px 0 #000, 1px 1px 0 #000;
+                "
+              >
+              </a>
+            </div>
+          </div>
+        </template>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  document.addEventListener("alpine:init", () => {
+    Alpine.data("navmenu", () => ({
+      menues: [
+        { address: "aboutme.html", text: "Обо мне" },
+        { address: "forecast.html", text: "Предсказания" },
+        { address: "newconsalt.html", text: "Консультации" },
+        { address: "index.html", text: "Астроблог" },
+        { address: "kontackt.html", text: "Контакты" },
+      ],
+    }));
+  });
+</script>
+<script>
+  document.addEventListener("alpine:init", () => {
+    Alpine.data("astroblog", () => ({
+      blogs: [
+        {
+          image: "vozrastbr.png",
+          alt: "возраст",
+          head: "ТРИ ПЕРИОДА ЖИЗНИ В ГОРОСКОПЕ.",
+          text: "Молодость, зрелые годы и старость.",
+          href: "article1.html",
+        },
+        {
+          image: "planety.png",
+          alt: "планеты",
+          head: "ПЛАНЕТЫ В ПЕРВОМ ДОМЕ.",
+          text: "Судьба, внешность, способности.",
+          href: "article2.html",
+        },
+        {
+          image: "lunasan.png",
+          alt: "светила",
+          head: "ЛУНА И СОЛНЦЕ.",
+          text: " Символы жизненной стойкости.",
+          href: "article3.html",
+        },
+        {
+          image: "kameshki.png",
+          alt: "камни",
+          head: "ЭНЕРГИЯ КАМНЕЙ.",
+          text: " Как правильно носить украшения.",
+          href: "article4.html",
+        },
+        {
+          image: "dengi.png",
+          alt: "деньги",
+          head: "ВТОРОЙ ДОМ ГОРОСКОПА.",
+          text: "Показатель достатка и благополучия.",
+          href: "article5.html",
+        },
+        {
+          image: "znaki.png",
+          alt: "знаки",
+          head: "ЧТО НАВЕРХУ, ТО И ВНИЗУ.",
+          text: " Древние мудрецы о знаках свыше.",
+          href: "article6.html",
+        },
+      ],
+    }));
+  });
+</script>

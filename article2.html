@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Milena Astrology</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+  </head>
+  <body
+    x-data="{open: false}"
+    class="bg-cover w-full h-full"
+    x-bind:class="{'bg-gradient-to-b from-slate-900 to-blue-950' :!open, 'md:bg-blue-tree':open,'bg-sky-one': open}"
+  >
+    <header
+      x-bind:class="{ 'h-screen':open, 'items-center':open}"
+      class="flex flex-col justify-between w-screen md:px-3 lg:w-full"
+    >
+    <div class="flex flex-col justify-start w-full">
+      
+        <button
+        x-on:click="open= ! open"
+        class="flex flex-col justify-start my-4 mx-1 fixed  top-0 right-0"
+        aria-label="Gamburger-menu"
+      >
+        <div :class="open?'':'space-y-3'" class="h-9 w-9">
+          <span
+            x-bind:class="{'rotate-45':open, 'absolute':open,'top-2.5':open}"
+            class="block w-8 h-0.5 bg-white"
+          ></span>
+          <span
+            x-bind:class="{'hidden':open}"
+            class="block w-8 h-0.5 bg-white"
+          ></span>
+          <span
+            x-bind:class="{'-rotate-45':open,'absolute':open, 'top-2.5':open}"
+            class="block w-8 h-0.5 bg-white absolute"
+          ></span>
+        </div>
+      </button>
+    
+      
+      <div
+        x-bind:class="{'hidden':!open}" 
+        class=" flex flex-col self-center space-y-2 text-center"
+      >
+        <h1
+          class="font-serif text-2xl my-1 lg:my-3 lg:text-4xl tracking-wide text-white"
+          style="
+            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+              1px 1px 0 #000;
+          "
+        >
+          MILENA KOVALSKA
+        </h1>
+        <h2
+          class="font-serif text-xs leading-3 my-1 md:text-lg lg:text-lg tracking-wide text-white"
+          style="
+            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+              1px 1px 0 #000;
+          "
+        >
+          МАСТЕР ХОРАРНОЙ АСТРОЛОГИИ
+        </h2>
+      </div>
+
+      
+      </div>
+      
+      <div
+        x-bind:class="{'hidden':!open}"
+        class=" w-3/4 text-center text-2xl  text-white self-center"
+      >
+        <ul class="flex flex-col h-full space-y-10 font-sans" x-data="navmenu">
+          <template x-for="(menu, index) in menues" :key="index">
+            <li><a x-bind:href="menu.address" x-text="menu.text"></a></li>
+          </template>
+        </ul>
+      </div>
+      <div class="h-9" x-bind:class="{'hidden':!open}"></div>
+    </header>
+    
+    <div
+      x-bind:class="{'hidden':open}"
+      class="w-full mt-3 bg-gradient-to-b from-slate-900 to-blue-950 lg:bg-amber-50 mx-auto flex flex-row justify-center "
+    >
+      <div class="mt-14 bg-slate-300 md:bg-white p-5 text-gray-800 w-full md:w-9/12 border-double border-4 border-gray-900 font-sans text-base">
+         
+        <h2
+          class="font-serif text-base text-violet-950 mt-1 mb-10 md:text-2xl lg:text-2xl text-center text-gray-900 "
+          
+        >
+        ПЛАНЕТЫ В ПЕРВОМ ДОМЕ: СУДЬБА, ВНЕШНОСТЬ, СПОСОБНОСТИ
+        </h2>
+        <img src="lotofpl.jpg" alt="планеты в доме" class="w-full  mr-5 lg:w-8/12 mt-2  lg:float-left " />
+        <!-- <h2 class="font-serif text-xs leading-3  md:text-2xl lg:text-2xl   font-bold text-center">молодость, зрелые годы и старость</h2> -->
+      
+      
+        
+        <p class="font-semibold mt-0.5 ">
+            Первым домом в греческой астрологии считается целый знак, в котором находится Асцендент.        </p>
+            <p class="font-semibold mt-0.5 ">Если Асцендент находится в 23 градусе Тельца — первым домом будет знак Тельца. Если Асцендент находится в 3 градусах Рака — первым домом будет целый знак Рака.
+                А теперь посмотрим, как планеты в знаках первого дома влияют на судьбу человека.</p>
+      <div class="">
+       
+                   
+
+
+        <h3 class=" text-lg lg:text-2xl  mt-10 md:text-2xl  ">
+            Венера
+        </h3>
+        <p class=" ">
+          
+            Венера в знаке Асцендента дает красивую, приятную внешность и обаяние. Такие люди привлекают внимание и пользуются благосклонностью окружающих. Среди известных артистов очень много людей с Венерой в первом доме.
+        </p>
+        
+      </div>
+
+        
+        
+        
+        
+      <div class="">
+        <h3 class="mt-10 text-lg lg:text-2xl  md:text-2xl  ">Меркурий</h3>
+        <p>
+            Меркурий в знаке Асцендента дарит своим подопечным высокий интеллект и умственные способности. Он помогает добиться результатов в науке, посреднической деятельности и торговле.  К примеру, среди Нобелевских лауреатов с известным часом рождения преобладают люди с таким Меркурием.
+        </p>
+        </div>
+        <div>
+        <h3 class="mt-10 lg:text-2xl text-lg md:text-2xl  ">Марс</h3>
+        <p>
+            Марс в первом доме Гороскопа дает человеку вспыльчивость и склонность к спонтанным, необдуманным поступкам. Эти люди чаще других бывают агрессивными.
+            Однако, такой Марс награждает своих подопечных не только негативными качествами, но и энергией, задором, быстротой реакции и спортивными талантами.
+        </p>
+        </div>
+        <div>
+        <h3 class="mt-10 lg:text-2xl text-lg md:text-2xl  ">Луна</h3>
+        <p> 
+            Луна в первом доме делает своих подопечных эмоциональными и чувствительными. Их нервная система и самочувствие сильно зависят от лунных циклов, особенно от Полнолуния и Новолуния. Жизнь таких людей не бывает стабильной, она полна перемен. Характер изменений зависит от аспектов планет и управителя первого дома.
+
+        </p>
+        </div>
+        <div>
+        
+        <h3 class="mt-10 lg:text-2xl text-lg md:text-2xl  ">Солнце</h3>
+        <p>
+            Солнце в первом доме указывает на яркого, незаурядного человека. Такие люди нередко становятся лидерами, особенно если Солнце находится в огненных знаках — Льва, Стрельца или Овна.
+
+        </p>
+        </div>
+        
+        <div>
+        <h3 class="mt-10 lg:text-2xl text-lg md:text-2xl  ">Юпитер</h2>
+        <p>
+            Люди с Юпитером в первом доме доброжелательны, щедры и невероятно обаятельны. Они склонны проявлять оптимизм даже в трудных ситуациях. При желании такие люди могут добиться многого, в их жизни всегда присутствует везение.
+
+        </p>
+        </div>
+        <div>
+            <h3 class="mt-10 lg:text-2xl text-lg md:text-2xl  ">Сатурн</h2>
+            <p>
+                Люди с Сатурном в первом доме склонны к депрессиям и меланхолии, у них нередко слабое здоровье. Особенно  при ночном рождении. Однако Сатурн дает не только отрицательные качества. Он наделяет своих подопечным логикой, незаурядным умом и здравым смыслом.
+
+            </p>
+            <p class="mt-10 font-semibold">
+                Вот основные качества, которые дают планеты, расположенные в первом доме. Более детальные прогнозы и описание вашего будущего можно узнать, записавшись ко мне на консультацию.  
+            </p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="group relative w-full overflow-hidden h-48">
+    <div
+      x-bind:class="{'hidden':open}"
+      class=" group-hover:pause animate-slide-delay mt-0.5 bg-gradient-to-b from-slate-900 to-blue-950 lg:bg-amber-50 flex flex-row absolute top-0"
+      x-data="astroblog"
+      style="width:1400px"
+    >
+      <template x-for="(blog,index) in blogs" :key="index">
+        <div
+          class="w-full lg:w-24/50 relative lg:m-1 mt-1 mb-0.5 mx-1 border-2 hover:border-4 text-center font-serif text-xs lg:text-lg tracking-wide md:text-lg text-white"
+        >
+          <img
+            x-bind:src="blog.image"
+            x-bind:alt="blog.alt"
+            class="z-0 w-full"
+          />
+          <div
+            class="flex flex-col justify-center w-full absolute top-0 left-0 h-full z-10 text-center font-serif text-xs lg:text-lg tracking-wide md:text-lg text-white"
+          >
+            <a
+              x-bind:href="blog.href"
+              x-text="blog.head"
+              class=""
+              style="
+                text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+                  1px 1px 0 #000;
+              "
+            >
+            </a>
+            <a
+              x-bind:href="blog.href"
+              x-text="blog.text"
+              class=""
+              style="
+                text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+                  1px 1px 0 #000;
+              "
+            >
+            </a>
+          </div>
+        </div>
+      </template>
+    </div>
+    
+    
+    <div
+      x-bind:class="{'hidden':open}"
+      class=" group-hover:pause animate-scroll-slide mt-0.5 bg-gradient-to-b from-slate-900 to-blue-950 lg:bg-amber-50 flex flex-row absolute top-0"
+      x-data="astroblog"
+      style="width:1400px"
+    >
+      <template x-for="(blog,index) in blogs" :key="index">
+        <div
+          class="w-full lg:w-24/50 relative lg:m-1 mt-1 mb-0.5 mx-1 border-2 hover:border-4 text-center font-serif text-xs lg:text-lg tracking-wide md:text-lg text-white"
+        >
+          <img
+            x-bind:src="blog.image"
+            x-bind:alt="blog.alt"
+            class="z-0 w-full"
+          />
+          <div
+            class="flex flex-col justify-center w-full absolute top-0 left-0 h-full z-10 text-center font-serif text-xs lg:text-lg tracking-wide md:text-lg text-white"
+          >
+            <a
+              x-bind:href="blog.href"
+              x-text="blog.head"
+              class=""
+              style="
+                text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+                  1px 1px 0 #000;
+              "
+            >
+            </a>
+            <a
+              x-bind:href="blog.href"
+              x-text="blog.text"
+              class=""
+              style="
+                text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+                  1px 1px 0 #000;
+              "
+            >
+            </a>
+          </div>
+        </div>
+      </template>
+    </div>
+    </div>
+    
+    
+    
+    
+  </body>
+</html>
+<script>
+  document.addEventListener("alpine:init", () => {
+    Alpine.data("navmenu", () => ({
+      menues: [
+        { address: "aboutme.html", text: "Обо мне" },
+        { address: "forecast.html", text: "Предсказания" },
+        { address: "newconsalt.html", text: "Консультации" },
+        { address: "index.html", text: "Астроблог" },
+        { address: "kontackt.html", text: "Контакты" },
+      ],
+    }));
+  });
+</script>
+<script>
+  document.addEventListener("alpine:init", () => {
+    Alpine.data("astroblog", () => ({
+      blogs: [
+        {
+          image: "vozrastbr.png",
+          alt: "возраст",
+          head: "ТРИ ПЕРИОДА ЖИЗНИ В ГОРОСКОПЕ.",
+          text: "Молодость, зрелые годы и старость.",
+          href: "article1.html",
+        },
+        {
+          image: "planety.png",
+          alt: "планеты",
+          head: "ПЛАНЕТЫ В ПЕРВОМ ДОМЕ.",
+          text: "Судьба, внешность, способности.",
+          href: "article2.html",
+        },
+        {
+          image: "lunasan.png",
+          alt: "светила",
+          head: "ЛУНА И СОЛНЦЕ.",
+          text: " Символы жизненной стойкости.",
+          href: "article3.html",
+        },
+        {
+          image: "kameshki.png",
+          alt: "камни",
+          head: "ЭНЕРГИЯ КАМНЕЙ.",
+          text: " Как правильно носить украшения.",
+          href: "article4.html",
+        },
+        {
+          image: "dengi.png",
+          alt: "деньги",
+          head: "ВТОРОЙ ДОМ ГОРОСКОПА.",
+          text: "Показатель достатка и благополучия.",
+          href: "article5.html",
+        },
+        {
+          image: "znaki.png",
+          alt: "знаки",
+          head: "ЧТО НАВЕРХУ, ТО И ВНИЗУ.",
+          text: " Древние мудрецы о знаках свыше.",
+          href: "article6.html",
+        },
+      ],
+    }));
+  });
+</script>
+

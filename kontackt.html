@@ -75,7 +75,7 @@
       <div class="h-9" x-bind:class="{'hidden':!open}"></div>
     </header>
     <nav
-      class="hidden lg:w-full xl:max-w-screen-xl xl:mx-auto 2xl:mx-auto 2xl:max-w-screen-xl lg:flex lg:flex-row lg:justify-around text-xl text-white font-sans"
+      class="hidden font-sans lg:w-full xl:max-w-screen-xl xl:mx-auto 2xl:mx-auto 2xl:max-w-screen-xl lg:flex lg:flex-row lg:justify-around text-xl text-white"
       x-data="navmenu"
     >
       <template x-for="(menu, index) in menues" :key="index">
@@ -84,56 +84,28 @@
     </nav>
     <div
       x-bind:class="{'hidden':open}"
-      class="lg:mt-10 lg:justify-center lg:mx-auto lg:w-10/12 flex flex-col md:flex-row lg:flex-row xl:flex-row 2xl:flex-row md:justify-start md:items-start md:mt-10 md:px-3 max-w-screen-xl"
-    >
-      <div
-        class="lg:basis-1/2 md:basis-5/12 md:flex lg:flex xl:flex 2xl:flex hidden border-8 border-white"
-      >
-        <img src="148.JPG" class="border-8 border-white" />
-      </div>
-      <div class="w-full flex lg:hidden md:hidden xl:hidden 2xl:hidden">
-        <img src="mymobileph.JPG" />
-      </div>
+      class="bg-hand-space bg-cover pt-10 text-center lg:w-11/12 md:w-full xl:max-w-screen-xl 2xl:max-w-screen-xl mx-auto mt-11  md:mt-5 text-2xl text-white font-sans italic font-semibold"
+      style="height: 500px"
+    ><p class="">С удовольствием дам ответ на интересующий вас вопрос.</p>
+    <p><ul class="space-y-7 mt-7">Мои контактные данные:
+        
+        <li class="mt-7">телеграм <span class="font-bold">@milenkovalska</span></li>
+        <li>электронная почта <span class="font-bold">milenahorar@gmail.com</span></li>
+         <li class="">фейсбук <a href="https://www.facebook.com/astrolog.esoteric/?locale=ms_MY"><div class="w-7 h-7 ml-3 inline-block border-2 bg-white align-middle ">
+        <img src="social.png" class="w-full" />
+      </div></a></li>
+    </ul></p>
+</div>
 
-      <div
-        class="basis-1/2 lg:grow md:basis-5/12 flex flex-col justify-center md:ml-12"
-      >
-        <p class="font-serif text-white text-lg ml-1 lg:ml-20 md:ml-15">
-          Здравствуйте! Я Милена, астролог с двадцатилетним стажем. Мой путь
-          начинался с изучения натальной астрологии, Таро и Рун. Долгое время я
-          считала эти системы самыми надежными и рабочими, пока в 2005 году не
-          познакомилась с хораром... Это была настоящее открытие! Ответы
-          поражали своей четкостью и безупречной точностью! Они давали всю
-          необходимую информацию, показывали, как именно будут развиваться
-          события. С этого времени хорарная астрология стала важной частью моей
-          жизни. С ее помощью я могу:
-        </p>
-
-        <ul
-          class="font-serif text-white text-lg list-disc ml-4 lg:ml-24 md:ml:18 space-y-2 my-7"
-        >
-          <li>дать ответ практически на все жизненные вопросы</li>
-          <li>рассказать правду о ваших близких и партнерах по бизнесу</li>
-          <li>предупредить негативные последствия</li>
-          <li>
-            обратить ваше внимание на важные нюансы, от которых зависит будущее
-          </li>
-          <li>определить ваши склонности, способности и таланты</li>
-          <li>составить медицинский прогноз</li>
-          <li>обратиться за советом к высшим силам</li>
-        </ul>
-      </div>
-    </div>
     <footer
-      x-bind:class="{'hidden':open}"
       id="mycont"
-      class="flex flex-row justify-center flex-wrap my-5"
+      class="flex flex-row justify-center flex-wrap mt-0 md:my-5"
       style="background-image: url('purplenight.jpg')"
     >
-      <a href="https://www.facebook.com/astrolog.esoteric/?locale=ms_MY"
-        ><div class="w-7 h-7 m-2 border-2 bg-white">
-          <img src="social.png" class="w-full" /></div
-      ></a>
+    <a href="https://www.facebook.com/astrolog.esoteric/?locale=ms_MY"> <div class="w-7 h-7 m-2 border-2 bg-white">
+        <img src="social.png" class="w-full" />
+      </div>
+    </a>
       <div class="w-7 h-7 m-2 bg-white border-2">
         <img src="instagram.png" class="w-full" />
       </div>
@@ -144,7 +116,7 @@
             1px 1px 0 #000;
         "
       >
-        milenakovalska@gmail.com
+        milenahorar@gmail.com
       </div>
       <img src="venzel.png" />
     </footer>
@@ -157,7 +129,7 @@
           { address: "forecast.html", text: "Предсказания" },
           { address: "newconsalt.html", text: "Консультации" },
           { address: "index.html", text: "Астроблог" },
-          { address: "kontackt.html", text: "Контакты" },
+          { address: "#mycont", text: "Контакты" },
         ],
       }));
     });

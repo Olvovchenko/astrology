@@ -13,7 +13,7 @@
   <body
     x-data="{open: false}"
     class="bg-cover w-full h-full"
-    x-bind:class="{'bg-gradient-to-b from-slate-900 to-blue-950' :!open, 'md:bg-blue-tree':open,'bg-sky-one': open}"
+    x-bind:class="{'bg-gradient-to-b from-slate-900 to-blue-950' :!open, 'bg-sky-one': open}"
   >
     <header
       x-bind:class="{ 'h-screen':open,'flex-row':!open, 'flex-col':open, 'items-end':open}"
@@ -76,7 +76,6 @@
           </template>
         </ul>
       </div>
-      <div class="h-9" x-bind:class="{'hidden':!open}"></div>
     </header>
     <nav
       class="hidden lg:w-full xl:max-w-screen-xl xl:mx-auto 2xl:mx-auto 2xl:max-w-screen-xl lg:flex lg:flex-row lg:justify-around text-xl text-white font-sans"

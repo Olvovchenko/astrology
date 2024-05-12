@@ -89,10 +89,13 @@
       <div
         class="lg:basis-1/2 md:basis-5/12 md:flex lg:flex xl:flex 2xl:flex hidden border-8 border-white"
       >
-        <img src="148.JPG" class="border-8 border-white" />
+        <img src="148.JPG" class="border-8 border-white" alt="моя фотография" />
       </div>
       <div class="w-full flex lg:hidden md:hidden xl:hidden 2xl:hidden">
-        <img src="mymobileph.JPG" />
+        <picture>
+          <source srcset="mymobileph1.JPG" media="(max-width: 600px)" />
+          <img src="mymobileph.JPG" alt="мое фото" />
+        </picture>
       </div>
 
       <div
